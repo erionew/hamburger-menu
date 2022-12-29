@@ -24,11 +24,16 @@ h1{
 .menu{
     position: absolute;
     padding: 0 4rem;
-    right: -400px;
+    right: -100%;
     height: 100vh;
-    width: 400px;
+    width: 100%;
     background-color: rgb(41, 41, 46);
+    transition: all 300ms;
     
+}
+
+.visible{
+    right: 0;
 }
 
 .menu__list{
@@ -58,4 +63,27 @@ h1{
     font-size: 1.75rem;
     color: rgb(255, 255, 255);
     cursor: pointer;
+}
+.container--img{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img--visible{
+    height: 225px;
+    width: 80%;
+    background-image: url(./photos/cherryblossom.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width: 768px){
+    .menu{
+        width: 500px;
+    }
+    .img--visible{
+        height: 400px;
+        width: 650px;
+    }
 }
